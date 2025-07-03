@@ -3,50 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Demonz Hosting Web</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Demonz Hosting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #1f1c2c, #928dab);
-      color: white;
-      text-align: center;
       margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1607976421270-8ef8c3f776f7?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      scroll-behavior: smooth;
     }
-    nav {
-      background-color: rgba(0, 0, 0, 0.5);
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff0055, #cc00ff);
       padding: 20px;
-      font-size: 20px;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #ffd700;
+      text-align: center;
+      font-size: 2.2rem;
       font-weight: bold;
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #111;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
       transition: 0.3s;
     }
+
     nav a:hover {
-      color: #00ffff;
+      color: #ff0055;
     }
-    h1 {
-      margin-top: 100px;
-      font-size: 36px;
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
     }
-    p {
-      font-size: 18px;
-      color: #dddddd;
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 10px #ff005522;
+    }
+
+    .card h2 {
+      color: #ff0055;
+      margin-bottom: 15px;
+    }
+
+    .harga-item {
+      margin-bottom: 8px;
+    }
+
+    .harga-item span {
+      color: #0f0;
+      font-weight: bold;
+    }
+
+    .kontak-link a {
+      display: block;
+      color: #0ff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+
+    .kontak-link a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-wa {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #25D366;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #25d36688;
+      transition: 0.3s;
+    }
+
+    .btn-wa:hover {
+      background: #1ebe5d;
+      box-shadow: 0 0 15px #25d366aa;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
+  <header>Demonz Hosting</header>
   <nav>
-    <a href="harga.html">💰 Harga</a>
-    <a href="kontak.html">📞 Kontak</a>
-    <a href="order.html">🛒 Order</a>
+    <a href="#menu">Menu</a>
+    <a href="#harga">Harga</a>
+    <a href="#kontak">Kontak</a>
   </nav>
 
-  <h1>Selamat datang di Demonz Hosting</h1>
-  <p>Website ini dihosting gratis menggunakan Vercel.</p>
+  <section id="menu">
+    <div class="card">
+      <h2>🧭 Menu</h2>
+      <ul>
+        <li>Panel Hosting 24/7</li>
+        <li>Bot WhatsApp</li>
+        <li>Jasa Install Panel</li>
+        <li>Custom VPS & Bot</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="harga">
+    <div class="card">
+      <h2>💰 DAFTAR HARGA PANEL DEMONZ</h2>
+      <div class="harga-item">1GB: <span>Rp 1.000</span></div>
+      <div class="harga-item">2GB: <span>Rp 2.000</span></div>
+      <div class="harga-item">3GB: <span>Rp 3.000</span></div>
+      <div class="harga-item">4GB: <span>Rp 4.000</span></div>
+      <div class="harga-item">5GB: <span>Rp 5.000</span></div>
+      <div class="harga-item">6GB: <span>Rp 6.000</span></div>
+      <div class="harga-item">7GB: <span>Rp 6.500</span></div>
+      <div class="harga-item">8GB: <span>Rp 7.000</span></div>
+      <div class="harga-item">9GB: <span>Rp 8.000</span></div>
+      <div class="harga-item">10GB: <span>Rp 9.000</span></div>
+      <div class="harga-item">UNLIMITED: <span>Rp 10.000</span></div>
+      <a class="btn-wa" href="https://wa.me/628892119837?text=Halo%20min,%20saya%20mau%20order%20panel">Pesan Sekarang</a>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="card">
+      <h2>💬 Kontak</h2>
+      <div class="kontak-link">
+        <a href="https://wa.me/628892119837">📱 WhatsApp: 08892119837</a>
+        <a href="mailto:wanzlonely04@gmail.com">📧 Email: wanzlonely04@gmail.com</a>
+        <a href="https://instagram.com/zxuwan25">📸 Instagram: @zxuwan25</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Demonz Hosting — Built with ❤️ on Vercel
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
