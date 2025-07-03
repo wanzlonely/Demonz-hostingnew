@@ -3,205 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Demonz Hosting</title>
+  <title>Beranda | Demonz Hosting</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: url('https://images.unsplash.com/photo-1607976421270-8ef8c3f776f7?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      scroll-behavior: smooth;
-    }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #fff;
+  }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(5px);
-      z-index: -1;
-    }
+  header {
+    background: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00bcd4;
+  }
 
-    header {
-      background: linear-gradient(90deg, #ff0055, #cc00ff);
-      padding: 20px;
-      text-align: center;
-      font-size: 2.2rem;
-      font-weight: bold;
-      color: white;
-      letter-spacing: 1px;
-    }
+  nav {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      background: #111;
-      padding: 15px;
-      flex-wrap: wrap;
-    }
+  nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+  nav a:hover {
+    color: #00bcd4;
+  }
 
-    nav a:hover {
-      color: #ff0055;
-    }
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
 
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
+  .card {
+    background: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+  }
 
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .card h2 {
+    color: #00bcd4;
+  }
 
-    .card {
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 0 10px #ff005522;
-    }
+  .product-card {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 
-    .card h2 {
-      color: #ff0055;
-      margin-bottom: 15px;
-    }
+  .product-card h3 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+  }
 
-    .harga-item {
-      margin-bottom: 8px;
-    }
+  .product-card p {
+    margin: 5px 0;
+  }
 
-    .harga-item span {
-      color: #0f0;
-      font-weight: bold;
-    }
+  .price {
+    color: #0f0;
+    font-weight: bold;
+  }
 
-    .kontak-link a {
-      display: block;
-      color: #0ff;
-      text-decoration: none;
-      margin-bottom: 10px;
-    }
+  .btn-cart, .btn-wa {
+    margin-top: 10px;
+    background: #2196f3;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-    .kontak-link a:hover {
-      text-decoration: underline;
-    }
+  .btn-cart:hover, .btn-wa:hover {
+    background: #1976d2;
+  }
 
-    .btn-wa {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #25D366;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px #25d36688;
-      transition: 0.3s;
-    }
-
-    .btn-wa:hover {
-      background: #1ebe5d;
-      box-shadow: 0 0 15px #25d366aa;
-    }
-
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    background: #1e1e1e;
+    margin-top: 40px;
+  }
+</style>
 </head>
 <body>
-  <header>Demonz Hosting</header>
+  <header>DEMONZ HOSTING</header>
   <nav>
-    <a href="#menu">Menu</a>
-    <a href="#harga">Harga</a>
-    <a href="#kontak">Kontak</a>
+    <a href="index.html">Beranda</a>
+    <a href="harga.html">Harga</a>
+    <a href="order.html">Order</a>
+    <a href="kontak.html">Kontak</a>
   </nav>
-
-  <section id="menu">
+  <div class="container">
     <div class="card">
-      <h2>🧭 Menu</h2>
-      <ul>
-        <li>Panel Hosting 24/7</li>
-        <li>Bot WhatsApp</li>
-        <li>Jasa Install Panel</li>
-        <li>Custom VPS & Bot</li>
-      </ul>
+      <h2>Selamat Datang</h2>
+      <p>Layanan Hosting, VPS, Bot, dan Script terbaik dengan harga murah dan layanan 24/7 nonstop!</p>
     </div>
-  </section>
-
-  <section id="harga">
-    <div class="card">
-      <h2>💰 DAFTAR HARGA PANEL DEMONZ</h2>
-      <div class="harga-item">1GB: <span>Rp 1.000</span></div>
-      <div class="harga-item">2GB: <span>Rp 2.000</span></div>
-      <div class="harga-item">3GB: <span>Rp 3.000</span></div>
-      <div class="harga-item">4GB: <span>Rp 4.000</span></div>
-      <div class="harga-item">5GB: <span>Rp 5.000</span></div>
-      <div class="harga-item">6GB: <span>Rp 6.000</span></div>
-      <div class="harga-item">7GB: <span>Rp 6.500</span></div>
-      <div class="harga-item">8GB: <span>Rp 7.000</span></div>
-      <div class="harga-item">9GB: <span>Rp 8.000</span></div>
-      <div class="harga-item">10GB: <span>Rp 9.000</span></div>
-      <div class="harga-item">UNLIMITED: <span>Rp 10.000</span></div>
-      <a class="btn-wa" href="https://wa.me/628892119837?text=Halo%20min,%20saya%20mau%20order%20panel">Pesan Sekarang</a>
-    </div>
-  </section>
-
-  <section id="kontak">
-    <div class="card">
-      <h2>💬 Kontak</h2>
-      <div class="kontak-link">
-        <a href="https://wa.me/628892119837">📱 WhatsApp: 08892119837</a>
-        <a href="mailto:wanzlonely04@gmail.com">📧 Email: wanzlonely04@gmail.com</a>
-        <a href="https://instagram.com/zxuwan25">📸 Instagram: @zxuwan25</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Demonz Hosting — Built with ❤️ on Vercel
-  </footer>
-
-  <script>
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
+  </div>
+  <footer>© 2025 Demonz Hosting</footer>
 </body>
 </html>
